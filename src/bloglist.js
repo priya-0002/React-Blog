@@ -8,7 +8,7 @@
             {blog.tittle}
              </h2>
              <p> written by { blog.author}</p>
-             <button onclick={()=>handleDelete(blog.id)}>delete blog</button>
+             <button onClick={()=>handleDelete(blog.id)}>delete blog</button>
              </div>
            ))}
         </div>
