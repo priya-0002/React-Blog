@@ -1,0 +1,17 @@
+{
+    "blogs":[
+    {
+        "tittle":"John",
+         "body":"Doe" ,"author":"robert",
+         "id":"1"
+ 
+    },
+
+    {
+        "tittle":"John",
+         "body":"Doe" ,"author":"robert",
+         "id":"2"
+ 
+    }
+]
+}

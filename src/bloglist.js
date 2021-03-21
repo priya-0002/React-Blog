@@ -1,5 +1,5 @@
   const BlogList = (props) => {
-    const{blogers,handleDelete}=props;
+    const{blogers}=props;
     return (
         <div className="blog-list">
             {blogers.map((blog) => (
@@ -8,7 +8,7 @@
             {blog.tittle}
              </h2>
              <p> written by { blog.author}</p>
-             <button onClick={()=>handleDelete(blog.id)}>delete blog</button>
+             
              </div>
            ))}
         </div>
