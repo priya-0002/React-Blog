@@ -3,43 +3,46 @@ import BlogList from  './BlogList';
 
  
 const Home = () => {
-    const[blogs,setBlogs]=useState(
-   
-   null);
+    const[blogs,setBlogs]=useState([]); 
+    const[isPending,setIsPending]=useState(false);
 
      
  
-        useEffect(()=>{                                                                              
-          fetch(' http://localhost:8001/blogs')                                                          
-        
-      .then((res)=>{                                                                              
-        return res.json();
-      })
-      .then((result)=>{
-        
-        console.log(result);
-        setBlogs(result)
+        useEffect(()=>{  
+          setTimeout(()=>{
+            fetch('http://localhost:8001/blogs')                                                     
+            .then((res)=>{                                                                              
+              return res.json();
+            })
+            .then((result)=>{
+              
+              console.log(result);
+              setBlogs(result)
+              console.log(blogs)
+             setIsPending(true)
+      
+            })
+                
+          },1000
 
-
-      })
-          
+          )                                                                            
+        
         },[]);
      
 
    
     return (
       <div className="home">
-      {
-           blogs.map((json)=>{
-             return <h1>{ json.tittle}</h1>
-            
-            
-
-           })
-      }
+      {isPending?<BlogList blogers={blogs}/>:<h1> loading..</h1>
+        
+        }
+        </div>
+        
+        
+    
  
       
-       </div>
+       
         
       );
 }
