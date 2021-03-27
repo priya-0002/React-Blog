@@ -6,10 +6,10 @@ import{ useState,useEffect} from 'react';
 
 
 
-       const UseFetch=( ) =>{
-        const[data,setdata] =useState(null);
-        const[isPending,setIsPending]=useState(true);
-        const[error,setError]=useState(null);
+       const useFetch=( url) =>{
+        const[blogs, setData] =useState([]);
+        const[isPending, setIsPending]=useState(true);
+        const[error, setError]=useState(null);
 
         
     
@@ -18,7 +18,7 @@ import{ useState,useEffect} from 'react';
 
 
 
-        useEffect(()=>{  
+        useEffect((url)=>{  
             setTimeout(()=>{
               fetch(url)                                                     
               .then((res)=>{   
@@ -31,8 +31,8 @@ import{ useState,useEffect} from 'react';
               .then((result)=>{
                 
                 console.log(result);
-                setBlogs(result)
-                console.log(data)
+                setData(result)
+                console.log(blogs)
                setIsPending(false)
                setError(null)
         
@@ -51,7 +51,8 @@ import{ useState,useEffect} from 'react';
        
 
           
-       }
-       return {data, isPending, error}
+       
+       return {blogs, isPending, error}
+      }
 
        export default useFetch;
