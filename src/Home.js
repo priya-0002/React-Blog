@@ -4,7 +4,7 @@ import useFetch from './UseFetch';
 
  
 const Home = () => {
-  const{blogs, isPending, error} = useFetch('  http://localhost:8002/blogs');
+  const{blogs, isPending, error} = useFetch('  http://localhost:8003/blogs');
    
 
      
@@ -16,7 +16,7 @@ const Home = () => {
       {isPending?<h1> loading..</h1>:<BlogList blogers={blogs}/>
         
         }
-        {blogs&&<BlogList blogs={blogs} tittle='All Blogs'/>}
+        {blogs&&<BlogList blogers={blogs} tittle='All Blogs'/>}
         
         </div>
         

@@ -3,16 +3,22 @@ import './App.css';
 import Nvbar from './Nvbar';
 import Home from './Home';
 import Greet from'./Greet';
+import{BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 function App() {
   const t='welcome priya'
   const likes=90;
   const link="www.google.com";
   return (
+    <Router>
     <div className="App">
       <Nvbar/>
      
      <div className="content">
-     <Home/>
+     <Switch>
+       <Route path="/">
+         <Home/>
+       </Route>
+     </Switch>
      <div className="new">
       
      <Greet name="India" heroName="batman" subject="english"/>
@@ -23,6 +29,7 @@ function App() {
 
      </div>
     </div>
+    </Router>
   );
 }
 

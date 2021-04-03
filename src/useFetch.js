@@ -18,7 +18,7 @@ import{ useState,useEffect} from 'react';
 
 
 
-        useEffect((url)=>{  
+        useEffect(()=>{  
             setTimeout(()=>{
               fetch(url)                                                     
               .then((res)=>{   
