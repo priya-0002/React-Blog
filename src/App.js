@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import Nvbar from './Nvbar';
 import Home from './Home';
-import Greet from'./Greet';
 import Create from './Create';
 import{BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import BlogDetails from './BlogDetails';
@@ -27,14 +26,7 @@ function App() {
          <BlogDetails/>
        </Route>
      </Switch>
-     <div className="new">
-      
-     <Greet name="India" heroName="batman" subject="english"/>
-     <Greet name="New-Zeland" heroName="batman" subject="english"/>
-     <Greet name="New-Zeland" heroName="batman" subject="english"/>
-   
-     </div>
-
+  
      </div>
     </div>
     </Router>
