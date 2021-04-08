@@ -4,10 +4,24 @@ const Create = () => {
     const[tittle,setTittle]=useState('');
     const[body,setBody]=useState('');
     const[author,setAuthor]=useState('mario');
+
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        const blog ={tittle,body,author};
+        console.log(tittle);
+        console.log(body);
+        console.log(author);
+        
+    }
+    
+    
+    
+    
+    
     return ( 
         <div classname="create">
             <h2>Add a New Blog</h2>
-            <form >
+            <form onSubmit={handleSubmit}>
                 <label>
                     Blog:Tittle
                 </label>
@@ -27,7 +41,7 @@ const Create = () => {
                 value={body}
                 onChange={(e)=>setBody(e.target.value)}
                 
-                ></textarea>
+                />
                  <label>
                Blog Author:
                 </label>
