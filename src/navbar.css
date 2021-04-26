@@ -6,10 +6,23 @@
 .create{ 
     position: absolute;
    
-   top:25%;
-    left: 45%;
+   top:15%;
+    left: 50%;
 
 }
 .home{
-    
+    position: absolute;
+   
+    top:30%;
+     left: 45%;
+}
+.create{
+    position: absolute;
+   
+    top:30%;
+     left: 40%;
+}
+
+label{
+    width: 150px;
 }

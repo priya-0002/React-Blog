@@ -18,7 +18,8 @@ const Create = () => {
     <div className="create">
       <h2>Add a New Blog</h2>
       <form onSubmit={handleSubmit}>
-        <label>Blog title:</label>
+        <label style={{
+                    width:'300px'}}>Blog title:</label>
         <input 
           type="text" 
           required 
