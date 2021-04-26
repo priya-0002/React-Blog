@@ -1,0 +1,17 @@
+.navbar{
+    position: absolute;
+   top: 10%;
+   left: 40%;
+}
+.create{ 
+    position: absolute;
+   
+   top:25%;
+    left: 45%;
+
+}
+.home{
+    position: absolute;
+    top:30%;
+    left:45%;
+}

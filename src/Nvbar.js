@@ -1,10 +1,15 @@
 import {Link} from 'react-router-dom';
+import "./navbar.css"
+
+
 
 
 const Nvbar  = () => {
     return (  
+       
         <nav className="navbar">
-           <h1>Dojo blog</h1> 
+           
+           <h1 >Blog Spot</h1> 
             <div className="links">
                 <Link to="/" style={{
                     color:"white",
