@@ -35,6 +35,7 @@ const Create = () => {
           onChange={(e) => setTittle(e.target.value)}
         />
         <label>Blog body:</label>
+        
         <textarea
           required
           value={body}
@@ -48,7 +49,7 @@ const Create = () => {
           <option value="Robin">Robin</option>
           <option value="Shenoy">Shenoy</option>
         </select>
-       {!isPending?<button>Add Blog</button>:<button>Adding Blog</button>} 
+       {!isPending?<button>Adding  Blog</button>:<button>Add Blog</button>} 
       </form>
     </div>
   );
